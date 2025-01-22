@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Action for Property Tag-->
+        <record id="estate_model_tag_action" model="ir.actions.act_window">
+            <field name="name">Estate Properties Tags</field>
+            <field name="res_model">estate.property.tag</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- List View for Property Tag-->
+        <record id="estate_property_tag_view_tree" model="ir.ui.view">
+            <field name="name">estate.property.tag.tree</field>
+            <field name="model">estate.property.tag</field>
+            <field name="arch" type="xml">
+                <tree string="Property Types" editable="top">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- Form View for Property Type-->
+        <record id="estate_property_tag_view_form" model="ir.ui.view">
+            <field name="name">estate.property.tag.form</field>
+            <field name="model">estate.property.tag</field>
+            <field name="arch" type="xml">
+                <form string="Property Tags">
+                    <group>
+                        <field name="name" style="font-size: 24px; font-weight: bold; width: 100%;"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
